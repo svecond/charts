@@ -599,7 +599,7 @@ Setting `.enterprise.smtp.disabled: true` will set `KONG_SMTP_MOCK=on` and
 allow Admin/Developer invites to proceed without sending email. Note, however,
 that these have limited functionality without sending email.
 
-If your SMTP server requires authentication, you should the `username` and
+If your SMTP server requires authentication,you should provide `smtp_auth_type` default value is `nil` but for some smtp server you will need to provide auth type  `plain` or `login`.Also you should provide the `username` and
 `smtp_password_secret` keys under `.enterprise.smtp.auth`.
 `smtp_password_secret` must be a Secret containing an `smtp_password` key whose
 value is your SMTP password.
